@@ -1,7 +1,11 @@
 alert("hola");
 const nombre = prompt("ingrese un nombre de usuario");
 let pass = parseInt(prompt("ingrese una clave numerica"));
+while (isNaN(pass)) {
+    alert("caracteres invalidos");
+    pass = parseInt(prompt("ingrese una clave numerica"));
 
+}
 alert("Gracias,ahora ingrese en el simulador con su usuario y contraseña");
 let user= prompt("Nombre de Usuario")
 let clave= parseInt(prompt("Contraseña"))
@@ -36,3 +40,16 @@ console.log(indice);
 alert("su indice de masa corporal es " + indice);
 
 
+if (18<indice && indice<=24) {
+    alert("su IMC se encuentra entre 18 y 24, peso optimo");
+}else if(24<indice && indice<=30){
+                            alert("su IMC se encuentra entre 24 y 30,peso levemente excedido");
+}else if(30<indice && indice<=35){
+    alert("su IMC se encuentra entre 30 y 35,peso excedido ");
+} 
+else if(35<indice && indice<=40){
+    alert("su IMC se encuentra entre 30 y 35,peso muy excedido ");
+} 
+else {
+    alert("rango patológico,consulte a un profesional");
+}
